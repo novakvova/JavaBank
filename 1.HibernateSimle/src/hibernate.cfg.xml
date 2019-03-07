@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	 	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://DESKTOP-SSQ41VA:3306/test25</property>
+		<property name="hibernate.connection.username">student</property>
+		<property name="hibernate.connection.password">student</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+	<property name="hibernate.connection.CharSet">utf8</property>
+	<property name="hibernate.connection.characterEncoding">utf8</property>
+	<property name="hibernate.connection.useUnicode">true</property>
+		<!-- Створення нової таблиці -->
+		<property name="hbm2ddl.auto">create</property>
+		<mapping resource="app/student.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
